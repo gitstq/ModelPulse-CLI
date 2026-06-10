@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "modelpulse-cli"
+version = "1.0.0"
+description = "Lightweight Terminal AI Model Real-time Monitoring & Intelligent Recommendation Engine"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "ModelPulse Team"},
+]
+keywords = ["ai", "llm", "monitoring", "recommendation", "cli", "model-comparison", "pricing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+    "Typing :: Typed",
+]
+
+[project.scripts]
+modelpulse = "modelpulse.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/ModelPulse-CLI"
+Repository = "https://github.com/gitstq/ModelPulse-CLI"
+Issues = "https://github.com/gitstq/ModelPulse-CLI/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
